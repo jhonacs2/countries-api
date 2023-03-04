@@ -8,6 +8,15 @@ FONT SIZE SYSTEM (px)
 *!*/
 @import "./assets/styles/general-styles";
 
+:root {
+  --ca-dark-blue: #2B3945FF;
+  --ca-very-dark-blue: #202C37FF;
+  --ca-dark-gray: #858585FF;
+  --ca-very-light-gray: #FAFAFAFF;
+  --ca-very-dark-blue-light: #111517FF;
+  --ca-white: #FFFFFFFF;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -22,4 +31,5 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   line-height: 1;
   font-weight: 400;
+  color: var(--ca-very-dark-blue-light);
 }

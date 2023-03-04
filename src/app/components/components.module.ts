@@ -5,11 +5,14 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 
 
 @NgModule({
-  declarations: [
-    MainNavComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        MainNavComponent
+    ],
+    exports: [
+        MainNavComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class ComponentsModule { }

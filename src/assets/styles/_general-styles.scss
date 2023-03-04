@@ -1,4 +1,18 @@
-.container {
+.ca-main-header {
+  padding: 2.4rem 0;
+}
+
+.ca-container {
   max-width: 120rem;
+  margin: 0 auto;
   padding: 0 3.2rem;
+}
+
+.ca-main-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ca-container-input-dark-mode {
+  align-self: center;
 }
