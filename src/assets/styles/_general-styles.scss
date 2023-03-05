@@ -26,6 +26,10 @@
   column-gap: 6.4rem;
 }
 
+.ca-grid-col-gap-6 {
+  row-gap: 6.4rem;
+}
+
 .ca-grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }

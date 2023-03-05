@@ -5,9 +5,10 @@ import { CountriesRoutingModule } from './routes/countries-routing.module';
 import { AllCountriesComponent } from './pages/all-countries/all-countries.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { ComponentsModule } from '../../components/components.module';
+import { CardCountriesComponent } from './components/card-countries/card-countries.component';
 
 @NgModule({
-  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent],
+  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent],
   imports: [
     CommonModule,
     CountriesRoutingModule,

@@ -1,0 +1,21 @@
+<div class="ca-container-sort-country">
+  <div>
+    <img [src]="country.flags.svg" [alt]="country.flags.alt" class="ca-img-country">
+  </div>
+  <div class="ca-container-details-country">
+    <p class="ca-title-country">{{country.name.common}}</p>
+    <p class="ca-text-details-country">
+      <span>Population:</span>
+      {{country.population}}
+    </p>
+    <p class="ca-text-details-country">
+      <span>Region:</span>
+      {{country.region}}
+    </p>
+
+    <p class="ca-text-details-country">
+      <span>Capital:</span>
+      {{country.capital}}
+    </p>
+  </div>
+</div>
