@@ -15,6 +15,11 @@ export const COUNTRIES_ROUTES: Routes = [
       {
         path: 'country',
         component: CountryPageComponent
+      },
+      {
+        path: '',
+        redirectTo: 'all',
+        pathMatch: 'full'
       }
     ]
   }

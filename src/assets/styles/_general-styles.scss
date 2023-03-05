@@ -16,3 +16,25 @@
 .ca-container-input-dark-mode {
   align-self: center;
 }
+
+
+.ca-grid {
+  display: grid;
+}
+
+.ca-grid-col-gap-6 {
+  column-gap: 6.4rem;
+}
+
+.ca-grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ca-grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ca-grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
