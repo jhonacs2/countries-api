@@ -1,5 +1,7 @@
 <main class="ca-main-countries">
-  <div class="ca-container ca-grid ca-grid--4-cols ca-grid-col-gap-6 ca-grid-row-gap-6">
+  <div class="ca-container ca-grid ca-grid--4-cols ca-grid-col-gap-6 ca-grid-row-gap-6" infiniteScroll
+       [infiniteScrollDistance]="2"
+       (scrolled)="onScroll()" >
     <app-card-countries *ngFor="let country of lazyLoadCountries" [country]="country"></app-card-countries>
   </div>
 </main>

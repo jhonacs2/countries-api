@@ -21,11 +21,15 @@ export class AllCountriesComponent implements OnInit {
   ngOnInit(): void {
     this._countriesService.getAllCountries().pipe(first()).subscribe(value => {
       this.allCountries = value;
-      this.spliceCountries();
+      this.spliceCountries(0, 12);
     });
   }
 
-  private spliceCountries() {
-    this.lazyLoadCountries = this.allCountries.splice(0, 8);
+  private spliceCountries( start: number = 0, end: number = 4 ) {
+    this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(start, end));
+  }
+
+  public onScroll() {
+    this.spliceCountries();
   }
 }

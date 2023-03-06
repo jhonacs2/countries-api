@@ -6,13 +6,15 @@ import { AllCountriesComponent } from './pages/all-countries/all-countries.compo
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { ComponentsModule } from '../../components/components.module';
 import { CardCountriesComponent } from './components/card-countries/card-countries.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent],
   imports: [
     CommonModule,
     CountriesRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    InfiniteScrollModule
   ]
 })
 export class CountriesModule {
