@@ -1,4 +1,20 @@
 <main class="ca-main-countries">
+  <div class="ca-container ca-mb-4 ca-container-filters">
+    <div class="ca-container-search-input">
+      <div style="width: 2rem" class="ca-container-icon">
+        <img src="./assets/icons/search-icon.svg" alt="search icon" style="width: 100%">
+      </div>
+      <input class="ca-search-input" type="text" placeholder="Search for a country...">
+    </div>
+
+    <select id="cars" class="ca-container-filters-selector">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+
   <div class="ca-container ca-grid ca-grid--4-cols ca-grid-col-gap-6 ca-grid-row-gap-6" infiniteScroll
        [infiniteScrollDistance]="2"
        (scrolled)="onScroll()" >
