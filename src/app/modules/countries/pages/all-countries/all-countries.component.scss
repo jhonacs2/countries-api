@@ -33,9 +33,14 @@
   border: none;
   box-shadow: 0 5px 15px #959DA533;
   margin-left: auto;
-  //padding: 1rem 4rem;
+  padding: 1rem 2rem;
   font-family: inherit;
   font-weight: 600;
+  border-radius: 1rem;
+
+  option {
+    padding: 1rem 2rem;
+  }
 }
 
 .ca-container-filters-selector:after {

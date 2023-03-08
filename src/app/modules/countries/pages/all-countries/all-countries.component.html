@@ -8,7 +8,7 @@
     </div>
 
     <select id="cars" class="ca-container-filters-selector">
-      <option value="volvo">Volvo</option>
+      <option value="">Filter by Region</option>
       <option value="saab">Saab</option>
       <option value="opel">Opel</option>
       <option value="audi">Audi</option>
@@ -17,7 +17,7 @@
 
   <div class="ca-container ca-grid ca-grid--4-cols ca-grid-col-gap-6 ca-grid-row-gap-6" infiniteScroll
        [infiniteScrollDistance]="2"
-       (scrolled)="onScroll()" >
+       (scrolled)="onScroll()">
     <app-card-countries *ngFor="let country of lazyLoadCountries" [country]="country"></app-card-countries>
   </div>
 </main>
