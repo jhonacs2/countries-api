@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
-import { first, Observable, shareReplay } from 'rxjs';
+import { first } from 'rxjs';
 import { CountryDataResponse } from '../../interfaces/country-data-response.interface';
 
 @Component({
@@ -13,23 +13,31 @@ export class AllCountriesComponent implements OnInit {
   public allCountries: CountryDataResponse[];
   public lazyLoadCountries: CountryDataResponse[];
 
+  private _start: number;
+  private _end: number;
+
   constructor( private _countriesService: CountriesService ) {
     this.lazyLoadCountries = [];
     this.allCountries = [];
+    this._start = 0;
+    this._end = 0;
   }
 
   ngOnInit(): void {
     this._countriesService.getAllCountries().pipe(first()).subscribe(value => {
       this.allCountries = value;
-      this.spliceCountries(0, 12);
+      console.log(value);
+      this.spliceCountries(0, 8);
     });
   }
 
-  private spliceCountries( start: number = 0, end: number = 4 ) {
-    this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(start, end));
+  private spliceCountries( start: number, end: number ): void {
+    this._start += start;
+    this._end += end;
+    this.lazyLoadCountries = this.allCountries.slice(this._start, this._end);
   }
 
-  public onScroll() {
-    this.spliceCountries();
+  public onScroll(): void {
+    this.spliceCountries(4, 12);
   }
 }
