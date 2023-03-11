@@ -28,7 +28,7 @@ export class AllCountriesComponent implements OnInit {
       .pipe(first())
       .subscribe(value => {
         this.allCountries = value;
-        this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 8));
+        this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 14));
       });
   }
 

@@ -7,3 +7,92 @@
   letter-spacing: -1px;
   color: inherit;
 }
+
+.ca-input-dark-mode {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.ca-input-dark-mode:checked + .ca-label-dark-mode {
+  background: #242424;
+}
+
+.ca-input-dark-mode:not(:checked) + .ca-label-dark-mode:after {
+  left: 0.5rem;
+
+}
+
+.ca-input-dark-mode:checked + .ca-label-dark-mode:after {
+  left: 100%;
+  transform: translate(calc(-100% - 0.5rem),0);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.ca-label-dark-mode, .ca-label-dark-mode:after {
+  transition: all 0.3s;
+}
+
+.ca-label-dark-mode {
+  width: 10rem;
+  height: 4rem;
+  position: relative;
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4), inset 0 0.5rem 1.5rem rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.ca-label-dark-mode:after {
+  content: '';
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 0.2rem;
+  //left: 0.5rem;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 10rem rgba(0, 0, 0, 0.2);
+}
+
+.ca-label-dark-mode:active:after {
+  width: 3.5rem;
+}
+
+.ca-label-dark-mode svg {
+  position: absolute;
+  width: 120px;
+  top: 40px;
+  z-index: 100;
+}
+
+.ca-label-dark-mode svg.sun {
+  left: 40px;
+  transition: 0.3s;
+
+  path {
+    fill: #fff;
+  }
+}
+
+.ca-label-dark-mode svg.moon {
+  right: 40px;
+  transition: 0.3s;
+
+  path {
+    stroke: #7e7e7e;
+  }
+}
+
+.ca-input-dark-mode:checked + .ca-label-dark-mode svg.sun {
+  path {
+    fill: #7e7e7e;
+  }
+}
+
+.ca-input-dark-mode:checked + .ca-label-dark-mode svg.moon {
+  path {
+    fill: #fff;
+  }
+}
