@@ -1,0 +1,42 @@
+<div class="ca-container ca-mb-4 ca-container-filters">
+  <div class="ca-container-search-input">
+    <div style="width: 2rem" class="ca-container-icon">
+      <img src="./assets/icons/search-icon.svg" alt="search icon" style="width: 100%">
+    </div>
+    <input class="ca-search-input"
+           type="text"
+           placeholder="Search for a country..."
+           (keyup.enter)="countryFilter()"
+           [(ngModel)]="countryText">
+  </div>
+
+  <details class="ca-container-filters-selector">
+    <summary class="ca-filter-radios">
+      <input type="radio" name="item" id="default" title="Filter By Region" checked>
+      <input type="radio" name="item" id="item1" title="Africa">
+      <input type="radio" name="item" id="item2" title="America">
+      <input type="radio" name="item" id="item3" title="Asia">
+      <input type="radio" name="item" id="item4" title="Europe">
+      <input type="radio" name="item" id="item5" title="Oceania">
+    </summary>
+    <ul class="list">
+      <li>
+        <label for="item1">
+          Africa
+        </label>
+      </li>
+      <li>
+        <label for="item2">America</label>
+      </li>
+      <li>
+        <label for="item3">Asia</label>
+      </li>
+      <li>
+        <label for="item4">Europe</label>
+      </li>
+      <li>
+        <label for="item5">Oceania</label>
+      </li>
+    </ul>
+  </details>
+</div>

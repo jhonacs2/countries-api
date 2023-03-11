@@ -24,20 +24,31 @@ export class AllCountriesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._countriesService.getAllCountries().pipe(first()).subscribe(value => {
-      this.allCountries = value;
-      console.log(value);
-      this.spliceCountries(0, 8);
-    });
+    this._countriesService.getAllCountries()
+      .pipe(first())
+      .subscribe(value => {
+        this.allCountries = value;
+        this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 8));
+      });
   }
 
-  private spliceCountries( start: number, end: number ): void {
-    this._start += start;
-    this._end += end;
-    this.lazyLoadCountries = this.allCountries.slice(this._start, this._end);
+  private spliceCountries(): void {
+    this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(this._start, this._end));
   }
 
   public onScroll(): void {
-    this.spliceCountries(4, 12);
+    this._start += 2;
+    this._end += 1;
+    this.spliceCountries();
+  }
+
+  public countryFilter( textCountry: string ): void {
+    this.lazyLoadCountries = [];
+    this._countriesService.getCountriesByName(textCountry)
+      .pipe(first())
+      .subscribe(value => {
+        this.allCountries = value;
+        this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 8));
+      });
   }
 }

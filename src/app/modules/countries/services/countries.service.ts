@@ -15,4 +15,8 @@ export class CountriesService {
   public getAllCountries(): Observable<CountryDataResponse[]> {
     return this._httpClient.get<CountryDataResponse[]>(`${ this.BASE_URL }/all`);
   }
+
+  public getCountriesByName( countryName: string ): Observable<CountryDataResponse[]> {
+    return this._httpClient.get<CountryDataResponse[]>(`${ this.BASE_URL }/name/${ countryName }`);
+  }
 }

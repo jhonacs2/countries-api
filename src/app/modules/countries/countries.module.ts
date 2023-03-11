@@ -7,14 +7,17 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
 import { ComponentsModule } from '../../components/components.module';
 import { CardCountriesComponent } from './components/card-countries/card-countries.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { CountrySearchComponent } from './components/country-search/country-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent],
+  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent, CountrySearchComponent],
   imports: [
     CommonModule,
     CountriesRoutingModule,
     ComponentsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    FormsModule
   ]
 })
 export class CountriesModule {
