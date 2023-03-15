@@ -13,12 +13,7 @@ export class MainNavComponent implements OnInit {
   }
 
   public changeTheme(): void {
-    // if (this.checkBoxDarkMode.nativeElement.checked) {
-    document.body.classList.toggle('dark-theme');
-    // } else {
-    //
-    // }
-    // console.log(this.checkBoxDarkMode.nativeElement.checked, 'checkout');
-    // document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light');
+    document.body.classList.toggle('dark');
   }
 }

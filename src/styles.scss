@@ -7,12 +7,19 @@ FONT SIZE SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 *!*/
 @import "./assets/styles/general-styles";
+@import "./assets/styles/theme";
 @import "~animate.css/animate.min.css";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+--ca-dark-blue: #2B3945FF;
+--ca-very-dark-blue: #202C37FF;
+--ca-dark-gray: #858585FF;
+--ca-very-light-gray: #a62b2b;
+--ca-very-dark-blue-light: #111517FF;
+--ca-white: #FFFFFFFF;
 }
 
 html {
@@ -24,20 +31,5 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--ca-text-color);
-  background-color: var(--ca-very-light-gray);
-}
-
-:root {
-  --ca-text-color: #111517FF;
-
-  --ca-dark-blue: #2B3945FF;
-  --ca-very-dark-blue: #202C37FF;
-  --ca-dark-gray: #858585FF;
-  --ca-very-light-gray: #FAFAFAFF;
-  --ca-very-dark-blue-light: #111517FF;
-  --ca-white: #FFFFFFFF;
-}
-
-:root .dark-mode {
-  --ca-text-color: #FAFAFAFF;
+  background-color: var(--ca-bg-color);
 }

@@ -1,0 +1,35 @@
+$bgColor_light: #FFFFFFFF;
+$text_color_light: #111517FF;
+$box_shadow_light: #959DA533;
+
+$bgColor_dark: #202C37FF;
+$text_color_dark: #FFFFFFFF;
+$box_shadow_dark: #111517FF;
+/*--ca-text-color: #111517FF;
+--ca-dark-blue: #2B3945FF;
+--ca-very-dark-blue: #202C37FF;
+--ca-dark-gray: #858585FF;
+--ca-very-light-gray: #a62b2b;
+--ca-very-dark-blue-light: #111517FF;
+--ca-white: #FFFFFFFF;*/
+
+@mixin lighten() {
+  --ca-bg-color: #{$bgColor_light};
+  --ca-text-color: #{$text_color_light};
+  --ca-box-shadow: #{$box_shadow_light};
+}
+
+@mixin darken() {
+  --ca-bg-color: #{$bgColor_dark};
+  --ca-text-color: #{$text_color_dark};
+  --ca-box-shadow: #{$box_shadow_dark};
+
+}
+
+body.dark {
+  @include darken();
+}
+
+body.light {
+  @include lighten();
+}
