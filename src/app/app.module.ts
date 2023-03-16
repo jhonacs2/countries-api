@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { MainComponent } from './modules/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ThemeService } from './shared/services/theme.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     ComponentsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

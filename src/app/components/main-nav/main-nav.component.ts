@@ -13,7 +13,7 @@ export class MainNavComponent implements OnInit {
   }
 
   public changeTheme(): void {
-    document.body.classList.toggle('light');
-    document.body.classList.toggle('dark');
+    // document.body.classList.toggle('light');
+    // document.body.classList.toggle('dark');
   }
 }
