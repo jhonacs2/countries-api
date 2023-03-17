@@ -4,14 +4,21 @@
 
 .ca-container-search-input {
   width: 35%;
-  box-shadow: 0 5px 15px #959DA533;
+  box-shadow: 0 5px 15px var(--ca-box-shadow);
   display: flex;
   align-items: center;
 }
 
 .ca-container-icon {
+  width: 2rem;
   margin-left: 3rem;
   opacity: 0.6;
+
+  svg {
+    path {
+      stroke: var(--ca-text-color);
+    }
+  }
 }
 
 .ca-search-input {
@@ -23,6 +30,12 @@
   border: none;
   padding: 1.6rem 2rem;
   width: 100%;
+  background-color: var(--ca-background-input);
+  color: var(--ca-text-color);
+}
+
+.ca-search-input::placeholder {
+  color: var(--ca-text-color);
 }
 
 .ca-search-input:focus {

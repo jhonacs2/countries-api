@@ -19,10 +19,16 @@ export class ThemeService {
   }
 
   private _init(): void {
-    const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
-    console.log(deviceMode);
-    // deviceMode.matches ? (initMode = Mode.DARK) : (initMode = Mode.LIGHT);
-    // this.updateCurrentMode(initMode);
     this._document.body.classList.add(this._currentMode);
+  }
+
+  public updateTheme() {
+    this._document.body.classList.toggle(ThemeMode.LIGHT);
+    this._document.body.classList.toggle(ThemeMode.DARK);
+    if (this._currentMode === ThemeMode.LIGHT) {
+      this._currentMode = ThemeMode.DARK;
+    } else {
+      this._currentMode = ThemeMode.LIGHT;
+    }
   }
 }

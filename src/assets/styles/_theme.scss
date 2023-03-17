@@ -1,35 +1,27 @@
 $bgColor_light: #FFFFFFFF;
 $text_color_light: #111517FF;
 $box_shadow_light: #959DA533;
+$background_input_light: #FFFFFFFF;
 
 $bgColor_dark: #202C37FF;
 $text_color_dark: #FFFFFFFF;
 $box_shadow_dark: #111517FF;
-/*--ca-text-color: #111517FF;
---ca-dark-blue: #2B3945FF;
---ca-very-dark-blue: #202C37FF;
---ca-dark-gray: #858585FF;
---ca-very-light-gray: #a62b2b;
---ca-very-dark-blue-light: #111517FF;
---ca-white: #FFFFFFFF;*/
+$background_input_dark: #202C37FF;
 
-@mixin lighten() {
-  --ca-bg-color: #{$bgColor_light};
-  --ca-text-color: #{$text_color_light};
-  --ca-box-shadow: #{$box_shadow_light};
-}
-
-@mixin darken() {
-  --ca-bg-color: #{$bgColor_dark};
-  --ca-text-color: #{$text_color_dark};
-  --ca-box-shadow: #{$box_shadow_dark};
-
+body{
+  transition: all 0.2s;
 }
 
 body.dark {
-  @include darken();
+  --ca-bg-color: #{$bgColor_dark};
+  --ca-text-color: #{$text_color_dark};
+  --ca-box-shadow: #{$box_shadow_dark};
+  --ca-background-input: #{$background_input_dark};
 }
 
 body.light {
-  @include lighten();
+  --ca-bg-color: #{$bgColor_light};
+  --ca-text-color: #{$text_color_light};
+  --ca-box-shadow: #{$box_shadow_light};
+  --ca-background-input: #{$background_input_light};
 }
