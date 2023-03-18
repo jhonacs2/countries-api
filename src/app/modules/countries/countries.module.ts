@@ -9,9 +9,10 @@ import { CardCountriesComponent } from './components/card-countries/card-countri
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CountrySearchComponent } from './components/country-search/country-search.component';
 import { FormsModule } from '@angular/forms';
+import { GetFirstAttrCurrencyObjectPipe } from './pipes/get-first-attr-object.pipe';
 
 @NgModule({
-  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent, CountrySearchComponent],
+  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent, CountrySearchComponent, GetFirstAttrCurrencyObjectPipe],
   imports: [
     CommonModule,
     CountriesRoutingModule,

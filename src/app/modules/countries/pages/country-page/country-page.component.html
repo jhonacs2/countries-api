@@ -1,1 +1,53 @@
-<p>country-page works!</p>
+<section class="ca-container">
+  <div class="ca-mb-6">
+    <button>BACK</button>
+  </div>
+
+  <div class="ca-grid ca-grid--2-cols ca-grid-col-gap-6">
+    <div>
+      <img [src]="countryResponse?.flags?.svg" [alt]="countryResponse?.name?.common + ' flag'"
+           class="ca-country-page-image">
+    </div>
+
+    <div>
+      <div class="ca-country-page-country-title ca-mb-3">{{countryResponse?.name?.common}}</div>
+      <div class="ca-grid ca-grid--2-cols">
+        <div>
+          <ul class="ca-country-page-details-list">
+            <li *ngIf="countryResponse?.name?.nativeName?.eng?.common">
+              <span>Native Name</span>: {{countryResponse?.name?.nativeName?.eng?.common}}
+            </li>
+            <li>
+              <span>Population:</span> {{countryResponse?.population}}
+            </li>
+            <li>
+              <span>Region:</span> {{countryResponse?.region}}
+            </li>
+            <li>
+              <span>Sub Region</span>: {{countryResponse?.subregion}}
+            </li>
+            <li>
+              <span>Capital:</span> {{countryResponse?.capital}}
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="ca-country-page-details-list">
+            <li *ngIf="countryResponse?.currencies">
+              <span>Currencie:</span> {{countryResponse?.currencies | getFirstAttrCurrencyObject }}
+            </li>
+
+            <li>
+              <span>Languages:</span>{{countryResponse?.languages}}
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p>Border Countries: {{countryResponse?.borders}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

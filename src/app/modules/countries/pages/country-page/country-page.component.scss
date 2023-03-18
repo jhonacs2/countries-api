@@ -1,0 +1,23 @@
+.ca-country-page-image {
+  width: 100%;
+}
+
+.ca-country-page-country-title {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
+
+.ca-country-page-details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  li {
+    font-size: 1.6rem;
+
+    span{
+      font-weight: 600;
+    }
+  }
+}

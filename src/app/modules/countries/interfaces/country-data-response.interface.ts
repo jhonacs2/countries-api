@@ -100,6 +100,7 @@ export interface Name {
 
 export interface NativeName {
   eng: Translation;
+  spa?: Translation;
 }
 
 export interface Translation {
