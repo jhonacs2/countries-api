@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 import { CountriesService } from '../../services/countries.service';
 import { CountryDataResponse } from '../../interfaces/country-data-response.interface';
@@ -12,11 +12,13 @@ import { CountryDataResponse } from '../../interfaces/country-data-response.inte
 export class CountryPageComponent implements OnInit {
 
   public countryResponse: CountryDataResponse | undefined;
-
+  public arrayLanguages: string;
 
   constructor( private _route: ActivatedRoute,
-               private _countriesService: CountriesService ) {
+               private _countriesService: CountriesService,
+               private _router: Router ) {
     this.countryResponse = undefined;
+    this.arrayLanguages = '';
   }
 
   ngOnInit(): void {
@@ -26,6 +28,14 @@ export class CountryPageComponent implements OnInit {
         return this._countriesService.getCountriesByName(countryName);
       }),
       map(value => value[0])
-    ).subscribe(response => this.countryResponse = response);
+    ).subscribe(response => {
+      this.countryResponse = response;
+      this._convertArrayLanguagesToString(response);
+    });
+  }
+
+  private _convertArrayLanguagesToString( response: CountryDataResponse ): void {
+    const objectEntriesArray = Object.entries(response.languages).map(language => language[1]);
+    this.arrayLanguages = objectEntriesArray.join(',');
   }
 }

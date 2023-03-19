@@ -1,4 +1,4 @@
-<div class="ca-container-sort-country animate__animated animate__fadeInUp" >
+<div class="ca-container-sort-country animate__animated animate__fadeInUp" [routerLink]="['../country',country.name.common]">
   <div>
     <img [src]="country.flags.svg" [alt]="country.flags.alt" class="ca-img-country">
   </div>
@@ -18,5 +18,4 @@
       {{country.capital}}
     </p>
   </div>
-  <a [routerLink]="['../country',country.name.common]" style="position: absolute;top: 0">see more</a>
 </div>

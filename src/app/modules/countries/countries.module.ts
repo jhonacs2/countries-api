@@ -10,9 +10,18 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CountrySearchComponent } from './components/country-search/country-search.component';
 import { FormsModule } from '@angular/forms';
 import { GetFirstAttrCurrencyObjectPipe } from './pipes/get-first-attr-object.pipe';
+import { GetFirstAttrLanguagesPipe } from './pipes/get-first-attr-languages.pipe';
 
 @NgModule({
-  declarations: [MainViewCountriesComponent, AllCountriesComponent, CountryPageComponent, CardCountriesComponent, CountrySearchComponent, GetFirstAttrCurrencyObjectPipe],
+  declarations: [
+    MainViewCountriesComponent,
+    AllCountriesComponent,
+    CountryPageComponent,
+    CardCountriesComponent,
+    CountrySearchComponent,
+    GetFirstAttrCurrencyObjectPipe,
+    GetFirstAttrLanguagesPipe,
+  ],
   imports: [
     CommonModule,
     CountriesRoutingModule,

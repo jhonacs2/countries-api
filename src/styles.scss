@@ -16,6 +16,23 @@ FONT SIZE SYSTEM (px)
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ca-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ca-text-color);
+  border-radius: 10px;
+}
+
+//::-webkit-scrollbar-thumb:hover {
+//  background: #555;
+//}
+
 html {
   font-size: 62.5%;
 }
