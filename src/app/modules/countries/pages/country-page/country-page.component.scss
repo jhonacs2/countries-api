@@ -3,6 +3,12 @@
   box-shadow: 0 5px 15px var(--ca-box-shadow);
 }
 
+.ca-loading-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
 .ca-country-page-country-title {
   font-size: 4.4rem;
   font-weight: 700;

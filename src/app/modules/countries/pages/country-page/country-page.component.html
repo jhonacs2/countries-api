@@ -3,10 +3,11 @@
     <button class="ca-button" [routerLink]="['../../all']">&leftarrow; &nbsp; Back</button>
   </div>
 
-  <div>
+  <div class="ca-loading-container" *ngIf="!countryResponse">
+    <app-loading></app-loading>
   </div>
 
-  <div class="ca-grid ca-grid--2-cols ca-grid-col-gap-6">
+  <div class="ca-grid ca-grid--2-cols ca-grid-col-gap-6 animate__animated animate__jackInTheBox" *ngIf="countryResponse">
     <div>
       <img [src]="countryResponse?.flags?.svg" [alt]="countryResponse?.name?.common + ' flag'"
            class="ca-country-page-image">

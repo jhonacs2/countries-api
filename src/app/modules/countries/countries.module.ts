@@ -11,6 +11,7 @@ import { CountrySearchComponent } from './components/country-search/country-sear
 import { FormsModule } from '@angular/forms';
 import { GetFirstAttrCurrencyObjectPipe } from './pipes/get-first-attr-object.pipe';
 import { GetFirstAttrLanguagesPipe } from './pipes/get-first-attr-languages.pipe';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import { GetFirstAttrLanguagesPipe } from './pipes/get-first-attr-languages.pipe
   ],
   imports: [
     CommonModule,
-    CountriesRoutingModule,
-    ComponentsModule,
+    FormsModule,
     InfiniteScrollModule,
-    FormsModule
+    ComponentsModule,
+    CountriesRoutingModule,
+    SharedModule
   ]
 })
 export class CountriesModule {
