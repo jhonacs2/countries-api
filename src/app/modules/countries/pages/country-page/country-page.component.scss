@@ -16,8 +16,20 @@
   li {
     font-size: 1.6rem;
 
-    span{
+    span {
       font-weight: 600;
     }
   }
+}
+
+.ca-country-page-border-countries {
+  display: flex;
+  gap: 1rem;
+}
+
+.ca-country-page-border-countries-text {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+  align-self: center;
 }

@@ -1,6 +1,6 @@
 <section class="ca-container">
   <div class="ca-mb-6">
-    <button>BACK</button>
+    <button class="ca-button">&leftarrow; &nbsp;  Back</button>
   </div>
 
   <div class="ca-grid ca-grid--2-cols ca-grid-col-gap-6">
@@ -11,7 +11,7 @@
 
     <div>
       <div class="ca-country-page-country-title ca-mb-3">{{countryResponse?.name?.common}}</div>
-      <div class="ca-grid ca-grid--2-cols">
+      <div class="ca-grid ca-grid--2-cols ca-mb-4">
         <div>
           <ul class="ca-country-page-details-list">
             <li *ngIf="countryResponse?.name?.nativeName?.eng?.common">
@@ -32,21 +32,22 @@
           </ul>
         </div>
 
-        <div>
+        <div class="cam">
           <ul class="ca-country-page-details-list">
             <li *ngIf="countryResponse?.currencies">
               <span>Currencie:</span> {{countryResponse?.currencies | getFirstAttrCurrencyObject }}
             </li>
 
             <li>
-              <span>Languages:</span>{{countryResponse?.languages}}
+              <span>Languages:</span>{{countryResponse?.languages | json}}
             </li>
           </ul>
         </div>
+      </div>
 
-        <div>
-          <p>Border Countries: {{countryResponse?.borders}}</p>
-        </div>
+      <div class="ca-country-page-border-countries">
+        <p class="ca-country-page-border-countries-text">Border Countries :</p>
+        <button class="ca-button" *ngFor="let countryBorder of countryResponse?.borders">{{countryBorder | titlecase}}</button>
       </div>
     </div>
   </div>

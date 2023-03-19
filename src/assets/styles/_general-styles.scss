@@ -18,6 +18,21 @@
   align-self: center;
 }
 
+.ca-button {
+  padding: 1rem 3rem;
+  box-shadow: 0 3px 1.5rem var(--ca-box-shadow);
+  background-color: var(--ca-bg-color);
+  border: none;
+  color: var(--ca-text-color);
+  border-radius: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.ca-button:hover {
+  //background-color: ;
+}
+
 .ca-grid {
   display: grid;
 }
