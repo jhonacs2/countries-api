@@ -9,37 +9,37 @@
 
   <div class="ca-grid ca-grid--2-cols ca-grid-col-gap-6 animate__animated animate__jackInTheBox" *ngIf="countryResponse">
     <div>
-      <img [src]="countryResponse?.flags?.svg" [alt]="countryResponse?.name?.common + ' flag'"
+      <img [src]="countryResponse!.flags.svg" [alt]="countryResponse!.name.common"
            class="ca-country-page-image">
     </div>
 
     <div>
-      <div class="ca-country-page-country-title ca-mb-3">{{countryResponse?.name?.common}}</div>
+      <div class="ca-country-page-country-title ca-mb-3">{{countryResponse!.name.common}}</div>
       <div class="ca-grid ca-grid--2-cols ca-mb-4">
         <div>
           <ul class="ca-country-page-details-list">
-            <li *ngIf="countryResponse?.name?.nativeName?.eng?.common">
-              <span>Native Name</span>: {{countryResponse?.name?.nativeName?.eng?.common}}
+            <li *ngIf="countryResponse.name.nativeName.eng">
+              <span>Native Name</span>: {{countryResponse!.name!.nativeName!.eng!.common}}
             </li>
             <li>
-              <span>Population:</span> {{countryResponse?.population}}
+              <span>Population:</span> {{countryResponse.population}}
             </li>
             <li>
-              <span>Region:</span> {{countryResponse?.region}}
+              <span>Region:</span> {{countryResponse!.region}}
             </li>
             <li>
-              <span>Sub Region</span>: {{countryResponse?.subregion}}
+              <span>Sub Region</span>: {{countryResponse!.subregion}}
             </li>
             <li>
-              <span>Capital:</span> {{countryResponse?.capital}}
+              <span>Capital:</span> {{countryResponse!.capital}}
             </li>
           </ul>
         </div>
 
         <div class="cam">
           <ul class="ca-country-page-details-list">
-            <li *ngIf="countryResponse?.currencies">
-              <span>Currency:</span> {{countryResponse?.currencies | getFirstAttrCurrencyObject }}
+            <li *ngIf="countryResponse.currencies">
+              <span>Currency:</span> {{countryResponse!.currencies | getFirstAttrCurrencyObject }}
             </li>
 
             <li>
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <div class="ca-country-page-border-countries" *ngIf="countryResponse?.borders">
+      <div class="ca-country-page-border-countries" *ngIf="countryResponse.borders">
         <p class="ca-country-page-border-countries-text">Border Countries:</p>
         <button class="ca-button"
                 *ngFor="let countryBorder of countryResponse?.borders">{{countryBorder | titlecase}}

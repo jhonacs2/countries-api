@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-country-search',
@@ -6,6 +6,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./country-search.component.scss']
 })
 export class CountrySearchComponent {
+  @ViewChild('filterSelector') public htmlFilterSelector!: ElementRef<HTMLSelectElement>;
+
   @Output() public countryInput: EventEmitter<string>;
 
   public countryText: string;
@@ -17,5 +19,9 @@ export class CountrySearchComponent {
 
   public countryFilter(): void {
     this.countryInput.emit(this.countryText);
+  }
+
+  clickFilter() {
+    console.log('click')
   }
 }

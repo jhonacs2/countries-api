@@ -3,7 +3,9 @@
     <div class="ca-container-icon">
       <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15 15L21 21" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#323232" stroke-width="2"/>
+        <path
+          d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+          stroke="#323232" stroke-width="2"/>
       </svg>
     </div>
     <input class="ca-search-input"
@@ -13,33 +15,14 @@
            [(ngModel)]="countryText">
   </div>
 
-  <details class="ca-container-filters-selector">
-    <summary class="ca-filter-radios">
-      <input type="radio" name="item" id="default" title="Filter By Region" checked>
-      <input type="radio" name="item" id="item1" title="Africa">
-      <input type="radio" name="item" id="item2" title="America">
-      <input type="radio" name="item" id="item3" title="Asia">
-      <input type="radio" name="item" id="item4" title="Europe">
-      <input type="radio" name="item" id="item5" title="Oceania">
-    </summary>
-    <ul class="list">
-      <li>
-        <label for="item1">
-          Africa
-        </label>
-      </li>
-      <li>
-        <label for="item2">America</label>
-      </li>
-      <li>
-        <label for="item3">Asia</label>
-      </li>
-      <li>
-        <label for="item4">Europe</label>
-      </li>
-      <li>
-        <label for="item5">Oceania</label>
-      </li>
-    </ul>
-  </details>
+  <div class="ca-container-filters-selector">
+    <select class="ca-search-input" id="filterByColor" #filterSelector>
+      <option class="ca-option-filter" value="" selected>Filter by Region</option>
+      <option (click)="clickFilter()" value="africa">Africa</option>
+      <option (click)="clickFilter()" value="america">America</option>
+      <option (click)="clickFilter()" value="asia">Asia</option>
+      <option (click)="clickFilter()" value="Europe">Europe</option>
+      <option (click)="clickFilter()" value="Oceania">Oceania</option>
+    </select>
+  </div>
 </div>
