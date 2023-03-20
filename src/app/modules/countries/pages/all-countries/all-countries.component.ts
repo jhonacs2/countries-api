@@ -37,8 +37,8 @@ export class AllCountriesComponent implements OnInit {
   }
 
   public onScroll(): void {
-    this._start += 2;
-    this._end += 1;
+    this._start += 4;
+    this._end += 2;
     this.spliceCountries();
   }
 
@@ -54,7 +54,6 @@ export class AllCountriesComponent implements OnInit {
 
   public regionFilter( value: string ): void {
     this.lazyLoadCountries = [];
-    console.log('region')
     this._countriesService.getCountriesByRegion(value)
       .pipe(first())
       .subscribe(value => {
