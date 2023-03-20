@@ -51,4 +51,15 @@ export class AllCountriesComponent implements OnInit {
         this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 8));
       });
   }
+
+  public regionFilter( value: string ): void {
+    this.lazyLoadCountries = [];
+    console.log('region')
+    this._countriesService.getCountriesByRegion(value)
+      .pipe(first())
+      .subscribe(value => {
+        this.allCountries = value;
+        this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 8));
+      });
+  }
 }

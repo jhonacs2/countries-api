@@ -16,13 +16,13 @@
   </div>
 
   <div class="ca-container-filters-selector">
-    <select class="ca-search-input" id="filterByColor" #filterSelector>
+    <select class="ca-search-input" id="filterByColor" (change)="clickFilter(filterSelector)" #filterSelector>
       <option class="ca-option-filter" value="" selected>Filter by Region</option>
-      <option (click)="clickFilter()" value="africa">Africa</option>
-      <option (click)="clickFilter()" value="america">America</option>
-      <option (click)="clickFilter()" value="asia">Asia</option>
-      <option (click)="clickFilter()" value="Europe">Europe</option>
-      <option (click)="clickFilter()" value="Oceania">Oceania</option>
+      <option value="africa">Africa</option>
+      <option value="america">America</option>
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="oceania">Oceania</option>
     </select>
   </div>
 </div>

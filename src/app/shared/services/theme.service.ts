@@ -12,7 +12,7 @@ export class ThemeService {
   private _themeChangedSubject: BehaviorSubject<ThemeMode>;
 
   constructor( @Inject(DOCUMENT) private _document: Document ) {
-    this._currentMode = ThemeMode.DARK;
+    this._currentMode = ThemeMode.LIGHT;
     this._themeChangedSubject = new BehaviorSubject<ThemeMode>(this._currentMode);
     this.themeChanged$ = this._themeChangedSubject.asObservable();
     this._init();

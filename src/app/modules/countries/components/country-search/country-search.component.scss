@@ -61,3 +61,25 @@
   }
 }
 
+@media (max-width: 50em) {
+  .ca-container-search-input {
+    width: 45%;
+  }
+}
+
+@media (max-width: 36em) {
+  .ca-container-search-input {
+    width: 100%;
+  }
+
+  .ca-container-filters{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .ca-container-filters-selector{
+    width: 70%;
+    margin-left: initial;
+  }
+}
+
