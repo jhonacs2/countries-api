@@ -1,27 +1,60 @@
-# ApiCountries
+# REST Countries API with color theme switcher solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## Table of contents
 
-## Development server
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Overview
 
-## Code scaffolding
+### The challenge
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Users should be able to:
 
-## Build
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Screenshot
 
-## Running unit tests
+![](./src/assets/images/screenshot.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Links
 
-## Running end-to-end tests
+- Solution URL: [Github](https://github.com/jhonacs2/countries-api)
+- Live Site URL: [Live Site](https://countries-glhirza6e-jhonacs2.vercel.app/countries/all)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## My process
 
-## Further help
+### Built with
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Angular](https://angular.io/) - Angular 15
+- [Sass](https://sass-lang.com/) - For styles
+- [Countries Api](https://restcountries.com/) - Api Countries
+- [Animate.css](https://animate.style/) - Animations
+- [Ngx infinite Scroll](ngx-infinite-scroll) - InfinityScroll
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- 100% Responsive
+
+### Useful resources
+
+- [Dark Mode Angular](https://github.dev/PahanPerera/angular-light-dark-app) -  This helped me add dark theme. adapting it my way and my solution
+
+## Author
+
+- Twitter - [Jhona_CSS](https://twitter.com/Jhona_CSS)
