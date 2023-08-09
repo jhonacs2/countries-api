@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CountriesService {
 
-  private readonly BASE_URL = 'https://restcountries.com/v3.1/';
+  private readonly BASE_URL = 'https://restcountries.com/v3.1';
 
   constructor( private _httpClient: HttpClient ) { }
 

@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { CountryDataResponse } from '../../interfaces/country-data-response.interface';
+import {Component, Input} from '@angular/core';
+import {CountryDataResponse} from '../../interfaces/country-data-response.interface';
 
 @Component({
   selector: 'app-card-countries',
@@ -7,7 +7,5 @@ import { CountryDataResponse } from '../../interfaces/country-data-response.inte
   styleUrls: ['./card-countries.component.scss']
 })
 export class CardCountriesComponent {
-
-  @Input() country!: CountryDataResponse ;
-
+  @Input() country!: CountryDataResponse;
 }
