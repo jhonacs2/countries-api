@@ -1,28 +1,20 @@
-import { Inject, Injectable } from '@angular/core';
-import { ThemeMode } from '../../interfaces/ThemeMode.enum';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { DOCUMENT } from '@angular/common';
+import {Inject, Injectable} from '@angular/core';
+import {ThemeMode} from '../../interfaces/ThemeMode.enum';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {DOCUMENT} from '@angular/common';
 
 @Injectable()
 export class ThemeService {
-
   public themeChanged$: Observable<ThemeMode>;
 
   private _currentMode: ThemeMode;
   private _themeChangedSubject: BehaviorSubject<ThemeMode>;
 
-  constructor( @Inject(DOCUMENT) private _document: Document ) {
+  constructor(@Inject(DOCUMENT) private _document: Document) {
     this._currentMode = ThemeMode.LIGHT;
     this._themeChangedSubject = new BehaviorSubject<ThemeMode>(this._currentMode);
     this.themeChanged$ = this._themeChangedSubject.asObservable();
     this._init();
-  }
-
-  private _init(): void {
-    const themeLocalStorage = this._getThemeLocalStore();
-    this._currentMode = themeLocalStorage as ThemeMode;
-    this._themeChangedSubject.next(themeLocalStorage as ThemeMode);
-    this._document.body.classList.add(this._currentMode);
   }
 
   public updateTheme() {
@@ -39,7 +31,14 @@ export class ThemeService {
     }
   }
 
-  private _updateLocalStore( theme: string ): void {
+  private _init(): void {
+    const themeLocalStorage = this._getThemeLocalStore();
+    this._currentMode = themeLocalStorage as ThemeMode;
+    this._themeChangedSubject.next(themeLocalStorage as ThemeMode);
+    this._document.body.classList.add(this._currentMode);
+  }
+
+  private _updateLocalStore(theme: string): void {
     localStorage.setItem('ca-theme', this._currentMode);
   }
 
