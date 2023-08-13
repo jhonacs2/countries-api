@@ -5,16 +5,19 @@ import {DOCUMENT} from '@angular/common';
 
 @Injectable()
 export class ThemeService {
-  public themeChanged$: Observable<ThemeMode>;
-
+  private _themeChanged$: Observable<ThemeMode>;
   private _currentMode: ThemeMode;
   private _themeChangedSubject: BehaviorSubject<ThemeMode>;
 
   constructor(@Inject(DOCUMENT) private _document: Document) {
     this._currentMode = ThemeMode.LIGHT;
     this._themeChangedSubject = new BehaviorSubject<ThemeMode>(this._currentMode);
-    this.themeChanged$ = this._themeChangedSubject.asObservable();
+    this._themeChanged$ = this._themeChangedSubject.asObservable();
     this._init();
+  }
+
+  get themeChanged$(): Observable<ThemeMode> {
+    return this._themeChanged$;
   }
 
   public updateTheme() {
@@ -22,12 +25,12 @@ export class ThemeService {
     this._document.body.classList.toggle(ThemeMode.DARK);
     if (this._currentMode === ThemeMode.LIGHT) {
       this._currentMode = ThemeMode.DARK;
-      this._updateLocalStore(this._currentMode);
+      this._updateLocalStore();
       this._themeChangedSubject.next(this._currentMode);
     } else {
       this._currentMode = ThemeMode.LIGHT;
       this._themeChangedSubject.next(this._currentMode);
-      this._updateLocalStore(this._currentMode);
+      this._updateLocalStore();
     }
   }
 
@@ -38,7 +41,7 @@ export class ThemeService {
     this._document.body.classList.add(this._currentMode);
   }
 
-  private _updateLocalStore(theme: string): void {
+  private _updateLocalStore(): void {
     localStorage.setItem('ca-theme', this._currentMode);
   }
 
