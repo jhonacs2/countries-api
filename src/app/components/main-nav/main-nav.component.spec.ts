@@ -4,6 +4,7 @@ import {MainNavComponent} from './main-nav.component';
 import {ThemeService} from '../../shared/services/theme.service';
 import {ThemeMode} from '../../interfaces/ThemeMode.enum';
 import {of} from 'rxjs';
+import {click, findEl} from '../../spec-helpers/element.spec-helper';
 
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
@@ -22,6 +23,10 @@ describe('MainNavComponent', () => {
     fakeThemeService = TestBed.inject(ThemeService);
   });
 
+  afterEach(() => {
+    localStorage.clear();
+  });
+
   it('should set dark theme to false if no theme is present in local storage', () => {
     fixture.detectChanges();
     expect(component.darkTheme).toBeFalsy();
@@ -32,5 +37,14 @@ describe('MainNavComponent', () => {
     fixture.detectChanges();
     expect(spy).toHaveBeenCalled();
     expect(component.darkTheme).toBeTruthy();
+  });
+
+  it('should change the theme upon clicking updateTheme', () => {
+    click(fixture, '.ca-input-dark-mode');
+    fixture.detectChanges();
+    const inputChecked: boolean = findEl(fixture, '.ca-input-dark-mode').nativeElement.checked;
+
+    expect(component.darkTheme).toBeTruthy();
+    expect(inputChecked).toBeTruthy();
   });
 });
