@@ -8,15 +8,17 @@
           stroke="#323232" stroke-width="2"/>
       </svg>
     </div>
+
     <input class="ca-search-input"
            type="text"
+           id="ca-search"
            placeholder="Search for a country..."
            (keyup.enter)="countryFilter()"
            [(ngModel)]="countryText">
   </div>
 
   <div class="ca-container-filters-selector">
-    <select class="ca-search-input" id="filterByColor" (change)="clickFilter(filterSelector)" #filterSelector>
+    <select class="ca-search-input" id="filterByRegion" (change)="clickFilter(filterSelector)" #filterSelector>
       <option class="ca-option-filter" value="" selected>Filter by Region</option>
       <option value="africa">Africa</option>
       <option value="america">America</option>
