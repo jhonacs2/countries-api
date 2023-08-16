@@ -2,6 +2,7 @@
       [infiniteScrollDistance]="0.5"
       (scrolled)="onScroll()">
   <app-country-search (countryInput)="countryFilter($event)" (regionSelector)="regionFilter($event)"></app-country-search>
+
   <div class="ca-container ca-grid ca-grid--4-cols ca-grid-col-gap-6 ca-grid-row-gap-6 ca-container-countries-card">
     <app-card-countries *ngFor="let country of lazyLoadCountries" [country]="country"></app-card-countries>
   </div>

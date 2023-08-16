@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { CountriesService } from '../../services/countries.service';
-import { first } from 'rxjs';
-import { CountryDataResponse } from '../../interfaces/country-data-response.interface';
+import {Component, OnInit} from '@angular/core';
+import {CountriesService} from '../../services/countries.service';
+import {first} from 'rxjs';
+import {CountryDataResponse} from '../../interfaces/country-data-response.interface';
 
 @Component({
   selector: 'app-all-countries',
@@ -9,14 +9,13 @@ import { CountryDataResponse } from '../../interfaces/country-data-response.inte
   styleUrls: ['./all-countries.component.scss']
 })
 export class AllCountriesComponent implements OnInit {
-
   public allCountries: CountryDataResponse[];
   public lazyLoadCountries: CountryDataResponse[];
 
   private _start: number;
   private _end: number;
 
-  constructor( private _countriesService: CountriesService ) {
+  constructor(private _countriesService: CountriesService) {
     this.lazyLoadCountries = [];
     this.allCountries = [];
     this._start = 0;
@@ -32,17 +31,13 @@ export class AllCountriesComponent implements OnInit {
       });
   }
 
-  private spliceCountries(): void {
-    this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(this._start, this._end));
-  }
-
   public onScroll(): void {
     this._start += 4;
     this._end += 2;
-    this.spliceCountries();
+    this._spliceCountries();
   }
 
-  public countryFilter( textCountry: string ): void {
+  public countryFilter(textCountry: string): void {
     this.lazyLoadCountries = [];
     this._countriesService.getCountriesByName(textCountry)
       .pipe(first())
@@ -52,7 +47,7 @@ export class AllCountriesComponent implements OnInit {
       });
   }
 
-  public regionFilter( value: string ): void {
+  public regionFilter(value: string): void {
     this.lazyLoadCountries = [];
     this._countriesService.getCountriesByRegion(value)
       .pipe(first())
@@ -60,5 +55,9 @@ export class AllCountriesComponent implements OnInit {
         this.allCountries = value;
         this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(0, 8));
       });
+  }
+
+  private _spliceCountries(): void {
+    this.lazyLoadCountries = this.lazyLoadCountries.concat(this.allCountries.splice(this._start, this._end));
   }
 }

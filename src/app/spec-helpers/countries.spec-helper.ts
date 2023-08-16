@@ -8172,6 +8172,7 @@ export const countriesByRegion: any = [
       'regex': '^\\d{5}(-\\d{4})?$'
     }
   }];
+
 export const countryCurrency = {
   'SEK': {
     'name': 'Swedish krona',
