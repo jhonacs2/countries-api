@@ -3457,6 +3457,849 @@ export const countries: any = [
       'format': '####',
       'regex': '^(\\d{4})$'
     }
+  },
+  {
+    'name': {
+      'common': 'Greenland',
+      'official': 'Greenland',
+      'nativeName': {
+        'kal': {
+          'official': 'Kalaallit Nunaat',
+          'common': 'Kalaallit Nunaat'
+        }
+      }
+    },
+    'tld': [
+      '.gl'
+    ],
+    'cca2': 'GL',
+    'ccn3': '304',
+    'cca3': 'GRL',
+    'independent': false,
+    'status': 'officially-assigned',
+    'unMember': false,
+    'currencies': {
+      'DKK': {
+        'name': 'krone',
+        'symbol': 'kr.'
+      }
+    },
+    'idd': {
+      'root': '+2',
+      'suffixes': [
+        '99'
+      ]
+    },
+    'capital': [
+      'Nuuk'
+    ],
+    'altSpellings': [
+      'GL',
+      'Grønland'
+    ],
+    'region': 'Americas',
+    'subregion': 'North America',
+    'languages': {
+      'kal': 'Greenlandic'
+    },
+    'translations': {
+      'ara': {
+        'official': 'جرينلاند',
+        'common': 'جرينلاند'
+      },
+      'bre': {
+        'official': 'Greunland',
+        'common': 'Greunland'
+      },
+      'ces': {
+        'official': 'Grónsko',
+        'common': 'Grónsko'
+      },
+      'cym': {
+        'official': 'Greenland',
+        'common': 'Greenland'
+      },
+      'deu': {
+        'official': 'Grönland',
+        'common': 'Grönland'
+      },
+      'est': {
+        'official': 'Gröönimaa',
+        'common': 'Gröönimaa'
+      },
+      'fin': {
+        'official': 'Groönlanti',
+        'common': 'Groönlanti'
+      },
+      'fra': {
+        'official': 'Groenland',
+        'common': 'Groenland'
+      },
+      'hrv': {
+        'official': 'Grenland',
+        'common': 'Grenland'
+      },
+      'hun': {
+        'official': 'Grönland',
+        'common': 'Grönland'
+      },
+      'ita': {
+        'official': 'Groenlandia',
+        'common': 'Groenlandia'
+      },
+      'jpn': {
+        'official': 'グリーンランド',
+        'common': 'グリーンランド'
+      },
+      'kor': {
+        'official': '그린란드',
+        'common': '그린란드'
+      },
+      'nld': {
+        'official': 'Groenland',
+        'common': 'Groenland'
+      },
+      'per': {
+        'official': 'گروئنلند',
+        'common': 'گرینلند'
+      },
+      'pol': {
+        'official': 'Grenlandia',
+        'common': 'Grenlandia'
+      },
+      'por': {
+        'official': 'Groenlândia',
+        'common': 'Gronelândia'
+      },
+      'rus': {
+        'official': 'Гренландия',
+        'common': 'Гренландия'
+      },
+      'slk': {
+        'official': 'Grónsko',
+        'common': 'Grónsko'
+      },
+      'spa': {
+        'official': 'Groenlandia',
+        'common': 'Groenlandia'
+      },
+      'srp': {
+        'official': 'Гренланд',
+        'common': 'Гренланд'
+      },
+      'swe': {
+        'official': 'Grönland',
+        'common': 'Grönland'
+      },
+      'tur': {
+        'official': 'Grönland',
+        'common': 'Grönland'
+      },
+      'urd': {
+        'official': 'گرین لینڈ',
+        'common': 'گرین لینڈ'
+      },
+      'zho': {
+        'official': '格陵兰',
+        'common': '格陵兰'
+      }
+    },
+    'latlng': [
+      72,
+      -40
+    ],
+    'landlocked': false,
+    'area': 2166086,
+    'demonyms': {
+      'eng': {
+        'f': 'Greenlandic',
+        'm': 'Greenlandic'
+      },
+      'fra': {
+        'f': 'Groenlandaise',
+        'm': 'Groenlandais'
+      }
+    },
+    'flag': '🇬🇱',
+    'maps': {
+      'googleMaps': 'https://goo.gl/maps/j3289UPEQXt1ceSy8',
+      'openStreetMaps': 'https://www.openstreetmap.org/relation/2184073'
+    },
+    'population': 56367,
+    'car': {
+      'signs': [
+        'DK'
+      ],
+      'side': 'right'
+    },
+    'timezones': [
+      'UTC-04:00',
+      'UTC-03:00',
+      'UTC-01:00',
+      'UTC+00:00'
+    ],
+    'continents': [
+      'North America'
+    ],
+    'flags': {
+      'png': 'https://flagcdn.com/w320/gl.png',
+      'svg': 'https://flagcdn.com/gl.svg'
+    },
+    'coatOfArms': {
+      'png': 'https://mainfacts.com/media/images/coats_of_arms/gl.png',
+      'svg': 'https://mainfacts.com/media/images/coats_of_arms/gl.svg'
+    },
+    'startOfWeek': 'monday',
+    'capitalInfo': {
+      'latlng': [
+        64.18,
+        -51.75
+      ]
+    },
+    'postalCode': {
+      'format': '####',
+      'regex': '^(\\d{4})$'
+    }
+  },
+  {
+    'name': {
+      'common': 'Bermuda',
+      'official': 'Bermuda',
+      'nativeName': {
+        'eng': {
+          'official': 'Bermuda',
+          'common': 'Bermuda'
+        }
+      }
+    },
+    'tld': [
+      '.bm'
+    ],
+    'cca2': 'BM',
+    'ccn3': '060',
+    'cca3': 'BMU',
+    'cioc': 'BER',
+    'independent': false,
+    'status': 'officially-assigned',
+    'unMember': false,
+    'currencies': {
+      'BMD': {
+        'name': 'Bermudian dollar',
+        'symbol': '$'
+      }
+    },
+    'idd': {
+      'root': '+1',
+      'suffixes': [
+        '441'
+      ]
+    },
+    'capital': [
+      'Hamilton'
+    ],
+    'altSpellings': [
+      'BM',
+      'The Islands of Bermuda',
+      'The Bermudas',
+      'Somers Isles'
+    ],
+    'region': 'Americas',
+    'subregion': 'North America',
+    'languages': {
+      'eng': 'English'
+    },
+    'translations': {
+      'ara': {
+        'official': 'برمودا',
+        'common': 'برمودا'
+      },
+      'bre': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'ces': {
+        'official': 'Bermudské ostrovy',
+        'common': 'Bermudy'
+      },
+      'cym': {
+        'official': 'Bermiwda',
+        'common': 'Bermiwda'
+      },
+      'deu': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'est': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'fin': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'fra': {
+        'official': 'Bermudes',
+        'common': 'Bermudes'
+      },
+      'hrv': {
+        'official': 'Bermuda',
+        'common': 'Bermudi'
+      },
+      'hun': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'ita': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'jpn': {
+        'official': 'バミューダ',
+        'common': 'バミューダ'
+      },
+      'kor': {
+        'official': '버뮤다',
+        'common': '버뮤다'
+      },
+      'nld': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'per': {
+        'official': 'جزایر برمودا',
+        'common': 'برمودا'
+      },
+      'pol': {
+        'official': 'Bermudy',
+        'common': 'Bermudy'
+      },
+      'por': {
+        'official': 'Bermudas',
+        'common': 'Bermudas'
+      },
+      'rus': {
+        'official': 'Бермудские острова',
+        'common': 'Бермудские Острова'
+      },
+      'slk': {
+        'official': 'Bermudy',
+        'common': 'Bermudy'
+      },
+      'spa': {
+        'official': 'Bermuda',
+        'common': 'Bermudas'
+      },
+      'srp': {
+        'official': 'Бермуда',
+        'common': 'Бермуда'
+      },
+      'swe': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'tur': {
+        'official': 'Bermuda',
+        'common': 'Bermuda'
+      },
+      'urd': {
+        'official': 'برمودا',
+        'common': 'برمودا'
+      },
+      'zho': {
+        'official': '百慕大',
+        'common': '百慕大'
+      }
+    },
+    'latlng': [
+      32.33333333,
+      -64.75
+    ],
+    'landlocked': false,
+    'area': 54,
+    'demonyms': {
+      'eng': {
+        'f': 'Bermudian',
+        'm': 'Bermudian'
+      },
+      'fra': {
+        'f': 'Bermudienne',
+        'm': 'Bermudien'
+      }
+    },
+    'flag': '🇧🇲',
+    'maps': {
+      'googleMaps': 'https://goo.gl/maps/NLsRGNjTzDghTtAJA',
+      'openStreetMaps': 'https://www.openstreetmap.org/relation/1993208'
+    },
+    'population': 63903,
+    'fifa': 'BER',
+    'car': {
+      'signs': [
+        'GB'
+      ],
+      'side': 'left'
+    },
+    'timezones': [
+      'UTC-04:00'
+    ],
+    'continents': [
+      'North America'
+    ],
+    'flags': {
+      'png': 'https://flagcdn.com/w320/bm.png',
+      'svg': 'https://flagcdn.com/bm.svg'
+    },
+    'coatOfArms': {
+      'png': 'https://mainfacts.com/media/images/coats_of_arms/bm.png',
+      'svg': 'https://mainfacts.com/media/images/coats_of_arms/bm.svg'
+    },
+    'startOfWeek': 'monday',
+    'capitalInfo': {
+      'latlng': [
+        32.28,
+        -64.78
+      ]
+    },
+    'postalCode': {
+      'format': '@@ ##',
+      'regex': '^([A-Z]{2}\\d{2})$'
+    }
+  },
+  {
+    'name': {
+      'common': 'Brazil',
+      'official': 'Federative Republic of Brazil',
+      'nativeName': {
+        'por': {
+          'official': 'República Federativa do Brasil',
+          'common': 'Brasil'
+        }
+      }
+    },
+    'tld': [
+      '.br'
+    ],
+    'cca2': 'BR',
+    'ccn3': '076',
+    'cca3': 'BRA',
+    'cioc': 'BRA',
+    'independent': true,
+    'status': 'officially-assigned',
+    'unMember': true,
+    'currencies': {
+      'BRL': {
+        'name': 'Brazilian real',
+        'symbol': 'R$'
+      }
+    },
+    'idd': {
+      'root': '+5',
+      'suffixes': [
+        '5'
+      ]
+    },
+    'capital': [
+      'Brasília'
+    ],
+    'altSpellings': [
+      'BR',
+      'Brasil',
+      'Federative Republic of Brazil',
+      'República Federativa do Brasil'
+    ],
+    'region': 'Americas',
+    'subregion': 'South America',
+    'languages': {
+      'por': 'Portuguese'
+    },
+    'translations': {
+      'ara': {
+        'official': 'جمهورية البرازيل الاتحادية',
+        'common': 'البرازيل'
+      },
+      'bre': {
+        'official': 'Republik Kevreel Brazil',
+        'common': 'Brazil'
+      },
+      'ces': {
+        'official': 'Brazilská federativní republika',
+        'common': 'Brazílie'
+      },
+      'cym': {
+        'official': 'Gweriniaeth Ffederal Brasil',
+        'common': 'Brasil'
+      },
+      'deu': {
+        'official': 'Föderative Republik Brasilien',
+        'common': 'Brasilien'
+      },
+      'est': {
+        'official': 'Brasiilia Liitvabariik',
+        'common': 'Brasiilia'
+      },
+      'fin': {
+        'official': 'Brasilian liittotasavalta',
+        'common': 'Brasilia'
+      },
+      'fra': {
+        'official': 'République fédérative du Brésil',
+        'common': 'Brésil'
+      },
+      'hrv': {
+        'official': 'Savezne Republike Brazil',
+        'common': 'Brazil'
+      },
+      'hun': {
+        'official': 'Brazil Szövetségi Köztársaság',
+        'common': 'Brazília'
+      },
+      'ita': {
+        'official': 'Repubblica federativa del Brasile',
+        'common': 'Brasile'
+      },
+      'jpn': {
+        'official': 'ブラジル連邦共和国',
+        'common': 'ブラジル'
+      },
+      'kor': {
+        'official': '브라질 연방 공화국',
+        'common': '브라질'
+      },
+      'nld': {
+        'official': 'Federale Republiek Brazilië',
+        'common': 'Brazilië'
+      },
+      'per': {
+        'official': 'جمهوری فدراتیو برزیل',
+        'common': 'برزیل'
+      },
+      'pol': {
+        'official': 'Federacyjna Republika Brazylii',
+        'common': 'Brazylia'
+      },
+      'por': {
+        'official': 'República Federativa do Brasil',
+        'common': 'Brasil'
+      },
+      'rus': {
+        'official': 'Федеративная Республика Бразилия',
+        'common': 'Бразилия'
+      },
+      'slk': {
+        'official': 'Brazílska federatívna republika',
+        'common': 'Brazília'
+      },
+      'spa': {
+        'official': 'República Federativa del Brasil',
+        'common': 'Brasil'
+      },
+      'srp': {
+        'official': 'Савезна Република Бразил',
+        'common': 'Бразил'
+      },
+      'swe': {
+        'official': 'Förbundsrepubliken Brasilien',
+        'common': 'Brasilien'
+      },
+      'tur': {
+        'official': 'Brezilya Federal Cumhuriyeti',
+        'common': 'Brezilya'
+      },
+      'urd': {
+        'official': 'وفاقی جمہوریہ برازیل',
+        'common': 'برازیل'
+      },
+      'zho': {
+        'official': '巴西联邦共和国',
+        'common': '巴西'
+      }
+    },
+    'latlng': [
+      -10,
+      -55
+    ],
+    'landlocked': false,
+    'borders': [
+      'ARG',
+      'BOL',
+      'COL',
+      'GUF',
+      'GUY',
+      'PRY',
+      'PER',
+      'SUR',
+      'URY',
+      'VEN'
+    ],
+    'area': 8515767,
+    'demonyms': {
+      'eng': {
+        'f': 'Brazilian',
+        'm': 'Brazilian'
+      },
+      'fra': {
+        'f': 'Brésilienne',
+        'm': 'Brésilien'
+      }
+    },
+    'flag': '🇧🇷',
+    'maps': {
+      'googleMaps': 'https://goo.gl/maps/waCKk21HeeqFzkNC9',
+      'openStreetMaps': 'https://www.openstreetmap.org/relation/59470'
+    },
+    'population': 212559409,
+    'gini': {
+      '2019': 53.4
+    },
+    'fifa': 'BRA',
+    'car': {
+      'signs': [
+        'BR'
+      ],
+      'side': 'right'
+    },
+    'timezones': [
+      'UTC-05:00',
+      'UTC-04:00',
+      'UTC-03:00',
+      'UTC-02:00'
+    ],
+    'continents': [
+      'South America'
+    ],
+    'flags': {
+      'png': 'https://flagcdn.com/w320/br.png',
+      'svg': 'https://flagcdn.com/br.svg',
+      'alt': 'The flag of Brazil has a green field with a large yellow rhombus in the center. Within the rhombus is a dark blue globe with twenty-seven small five-pointed white stars depicting a starry sky and a thin white convex horizontal band inscribed with the national motto \'Ordem e Progresso\' across its center.'
+    },
+    'coatOfArms': {
+      'png': 'https://mainfacts.com/media/images/coats_of_arms/br.png',
+      'svg': 'https://mainfacts.com/media/images/coats_of_arms/br.svg'
+    },
+    'startOfWeek': 'monday',
+    'capitalInfo': {
+      'latlng': [
+        -15.79,
+        -47.88
+      ]
+    },
+    'postalCode': {
+      'format': '#####-###',
+      'regex': '^(\\d{8})$'
+    }
+  },
+  {
+    'name': {
+      'common': 'Venezuela',
+      'official': 'Bolivarian Republic of Venezuela',
+      'nativeName': {
+        'spa': {
+          'official': 'República Bolivariana de Venezuela',
+          'common': 'Venezuela'
+        }
+      }
+    },
+    'tld': [
+      '.ve'
+    ],
+    'cca2': 'VE',
+    'ccn3': '862',
+    'cca3': 'VEN',
+    'cioc': 'VEN',
+    'independent': true,
+    'status': 'officially-assigned',
+    'unMember': true,
+    'currencies': {
+      'VES': {
+        'name': 'Venezuelan bolívar soberano',
+        'symbol': 'Bs.S.'
+      }
+    },
+    'idd': {
+      'root': '+5',
+      'suffixes': [
+        '8'
+      ]
+    },
+    'capital': [
+      'Caracas'
+    ],
+    'altSpellings': [
+      'VE',
+      'Bolivarian Republic of Venezuela',
+      'Venezuela, Bolivarian Republic of',
+      'República Bolivariana de Venezuela'
+    ],
+    'region': 'Americas',
+    'subregion': 'South America',
+    'languages': {
+      'spa': 'Spanish'
+    },
+    'translations': {
+      'ara': {
+        'official': 'جمهورية فنزويلا البوليفارية',
+        'common': 'فنزويلا'
+      },
+      'bre': {
+        'official': 'Republik Volivarian Venezuela',
+        'common': 'Venezuela'
+      },
+      'ces': {
+        'official': 'Bolívarská republika Venezuela',
+        'common': 'Venezuela'
+      },
+      'cym': {
+        'official': 'Bolivarian Republic of Venezuela',
+        'common': 'Venezuela'
+      },
+      'deu': {
+        'official': 'Bolivarische Republik Venezuela',
+        'common': 'Venezuela'
+      },
+      'est': {
+        'official': 'Venezuela Bolívari Vabariik',
+        'common': 'Venezuela'
+      },
+      'fin': {
+        'official': 'Venezuelan bolivariaainen tasavalta',
+        'common': 'Venezuela'
+      },
+      'fra': {
+        'official': 'République bolivarienne du Venezuela',
+        'common': 'Venezuela'
+      },
+      'hrv': {
+        'official': 'BOLIVARIJANSKA Republika Venezuela',
+        'common': 'Venezuela'
+      },
+      'hun': {
+        'official': 'Venezuelai Bolivári Köztársaság',
+        'common': 'Venezuela'
+      },
+      'ita': {
+        'official': 'Repubblica Bolivariana del Venezuela',
+        'common': 'Venezuela'
+      },
+      'jpn': {
+        'official': 'ベネズエラ·ボリバル共和国',
+        'common': 'ベネズエラ・ボリバル共和国'
+      },
+      'kor': {
+        'official': '베네수엘라 볼리바르 공화국',
+        'common': '베네수엘라'
+      },
+      'nld': {
+        'official': 'Bolivariaanse Republiek Venezuela',
+        'common': 'Venezuela'
+      },
+      'per': {
+        'official': 'جمهوری بولیواری ونزوئلا',
+        'common': 'ونزوئلا'
+      },
+      'pol': {
+        'official': 'Boliwariańska Republika Wenezueli',
+        'common': 'Wenezuela'
+      },
+      'por': {
+        'official': 'República Bolivariana da Venezuela',
+        'common': 'Venezuela'
+      },
+      'rus': {
+        'official': 'Боливарианская Республика Венесуэла',
+        'common': 'Венесуэла'
+      },
+      'slk': {
+        'official': 'Venezuelská bolívarovská republika',
+        'common': 'Venezuela'
+      },
+      'spa': {
+        'official': 'República Bolivariana de Venezuela',
+        'common': 'Venezuela'
+      },
+      'srp': {
+        'official': 'Боливарска Република Венецуела',
+        'common': 'Венецуела'
+      },
+      'swe': {
+        'official': 'Bolivarianska republiken Venezuela',
+        'common': 'Venezuela'
+      },
+      'tur': {
+        'official': 'Bolivarcı Venezuela Cumhuriyeti',
+        'common': 'Venezuela'
+      },
+      'urd': {
+        'official': 'جمہوریہ وینیزویلا',
+        'common': 'وینیزویلا'
+      },
+      'zho': {
+        'official': '委内瑞拉玻利瓦尔共和国',
+        'common': '委内瑞拉'
+      }
+    },
+    'latlng': [
+      8,
+      -66
+    ],
+    'landlocked': false,
+    'borders': [
+      'BRA',
+      'COL',
+      'GUY'
+    ],
+    'area': 916445,
+    'demonyms': {
+      'eng': {
+        'f': 'Venezuelan',
+        'm': 'Venezuelan'
+      },
+      'fra': {
+        'f': 'Vénézuélienne',
+        'm': 'Vénézuélien'
+      }
+    },
+    'flag': '🇻🇪',
+    'maps': {
+      'googleMaps': 'https://goo.gl/maps/KLCwDN8sec7z2kse9',
+      'openStreetMaps': 'https://www.openstreetmap.org/relation/272644'
+    },
+    'population': 28435943,
+    'gini': {
+      '2006': 44.8
+    },
+    'fifa': 'VEN',
+    'car': {
+      'signs': [
+        'YV'
+      ],
+      'side': 'right'
+    },
+    'timezones': [
+      'UTC-04:00'
+    ],
+    'continents': [
+      'South America'
+    ],
+    'flags': {
+      'png': 'https://flagcdn.com/w320/ve.png',
+      'svg': 'https://flagcdn.com/ve.svg',
+      'alt': 'The flag of Venezuela is composed of three equal horizontal bands of yellow, blue and red. At the center of the blue band are eight five-pointed white stars arranged in a horizontal arc.'
+    },
+    'coatOfArms': {
+      'png': 'https://mainfacts.com/media/images/coats_of_arms/ve.png',
+      'svg': 'https://mainfacts.com/media/images/coats_of_arms/ve.svg'
+    },
+    'startOfWeek': 'monday',
+    'capitalInfo': {
+      'latlng': [
+        10.48,
+        -66.87
+      ]
+    },
+    'postalCode': {
+      'format': '####',
+      'regex': '^(\\d{4})$'
+    }
   }];
 export const countriesByName: any = [
   {

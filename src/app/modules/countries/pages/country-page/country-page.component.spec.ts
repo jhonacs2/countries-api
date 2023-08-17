@@ -17,7 +17,7 @@ describe('CountryPageComponent', () => {
     fakeCounterService = jasmine.createSpyObj<CountriesService>(
       'CountriesService',
       {
-        getCountriesByName: of(countriesByName)
+        getCountriesByName: of([...countriesByName])
       }
     );
 
@@ -29,8 +29,7 @@ describe('CountryPageComponent', () => {
         {provide: CountriesService, useValue: fakeCounterService},
       ],
       declarations: [CountryPageComponent, GetFirstAttrCurrencyObjectPipe]
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CountryPageComponent);
     component = fixture.componentInstance;
@@ -44,6 +43,6 @@ describe('CountryPageComponent', () => {
   it('should fetch country details and convert array languages to string', () => {
     fixture.detectChanges();
     let languages = Object.values(component.countryResponse!.languages);
-    expect(component.arrayLanguages).toContain(languages.toString())
+    expect(component.arrayLanguages).toContain(languages.toString());
   });
 });
