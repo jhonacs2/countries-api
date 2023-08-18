@@ -1,4 +1,5 @@
 # REST Countries API with color theme switcher solution
+[coverage-badge-green]: https://img.shields.io/badge/Coverage-89%25-brightgreen.svg
 
 ## Table of contents
 
