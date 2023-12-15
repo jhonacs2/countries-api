@@ -29,8 +29,12 @@
   cursor: pointer;
 }
 
-.ca-button:hover {
-  //background-color: ;
+.ca-flex {
+  display: flex;
+}
+
+.ca-flex-align-center {
+  align-items: center;
 }
 
 .ca-grid {
@@ -92,6 +96,7 @@
     row-gap: 3.2rem;
   }
 }
+
 @media (max-width: 45em) {
   .ca-grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
@@ -100,7 +105,7 @@
 
 @media (max-width: 33em) {
   .ca-grid--4-cols,
-  .ca-grid--2-cols{
+  .ca-grid--2-cols {
     grid-template-columns: 1fr;
   }
 }
