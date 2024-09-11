@@ -1,8 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {map, Subject, switchMap, takeUntil} from 'rxjs';
 import {CountriesService} from '../../services/countries.service';
 import {CountryDataResponse} from '../../interfaces/country-data-response.interface';
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-country-page',
@@ -15,9 +16,10 @@ export class CountryPageComponent implements OnInit, OnDestroy {
 
   private _unsubscribe: Subject<void>;
 
-  constructor(private _route: ActivatedRoute,
-              private _countriesService: CountriesService,
-              private _router: Router) {
+  constructor(private _meta: Meta,
+              private _route: ActivatedRoute,
+              private _titleService: Title,
+              private _countriesService: CountriesService) {
     this.countryResponse = undefined;
     this.arrayLanguages = '';
     this._unsubscribe = new Subject<void>();
@@ -45,9 +47,20 @@ export class CountryPageComponent implements OnInit, OnDestroy {
         return this._countriesService.getCountriesByName(countryName);
       }),
       map(value => value[0])
-    ).subscribe(response => {
-      this.countryResponse = response;
-      this._convertArrayLanguagesToString(response);
+    ).subscribe(countryResponse => {
+      this.countryResponse = countryResponse;
+      this._convertArrayLanguagesToString(countryResponse);
+      this._updateMetaTags();
     });
+  }
+
+  private _updateMetaTags(): void {
+    const imageUrl = this.countryResponse?.flags.svg || '';
+    this._titleService.setTitle(`Details of ${this.countryResponse?.name.nativeName.eng.common}`)
+    this._meta.updateTag({
+      property: 'og:title',
+      content: `Details of ${this.countryResponse?.name.nativeName.eng.common}`
+    });
+    this._meta.updateTag({property: 'og:image', content: imageUrl});
   }
 }
