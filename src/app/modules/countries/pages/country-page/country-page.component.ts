@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {map, Subject, switchMap, takeUntil} from 'rxjs';
 import {CountriesService} from '../../services/countries.service';
 import {CountryDataResponse} from '../../interfaces/country-data-response.interface';
-import {Meta, Title} from "@angular/platform-browser";
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-country-page',
@@ -50,16 +50,16 @@ export class CountryPageComponent implements OnInit, OnDestroy {
     ).subscribe(countryResponse => {
       this.countryResponse = countryResponse;
       this._convertArrayLanguagesToString(countryResponse);
-      this._updateMetaTags();
     });
+    this._updateMetaTags();
   }
 
   private _updateMetaTags(): void {
-    const imageUrl = this.countryResponse?.flags.svg || '';
-    this._titleService.setTitle(`Details of ${this.countryResponse?.name.nativeName.eng.common}`)
+    const imageUrl = 'https://flagcdn.com/gd.svg';
+    this._titleService.setTitle(`Details of En`);
     this._meta.updateTag({
       property: 'og:title',
-      content: `Details of ${this.countryResponse?.name.nativeName.eng.common}`
+      content: `Details of gd`
     });
     this._meta.updateTag({property: 'og:image', content: imageUrl});
   }
