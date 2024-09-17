@@ -23,9 +23,11 @@ export class CountryPageComponent implements OnInit, OnDestroy {
     this.countryResponse = undefined;
     this.arrayLanguages = '';
     this._unsubscribe = new Subject<void>();
+    this._meta.updateTag({property: 'og:image', content: 'https://flagcdn.com/gd.svg'});
   }
 
   ngOnInit(): void {
+    this._meta.updateTag({property: 'og:image', content: 'https://flagcdn.com/gd.svg'});
     this._initialize();
   }
 
