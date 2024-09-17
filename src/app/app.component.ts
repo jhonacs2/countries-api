@@ -14,5 +14,6 @@ export class AppComponent {
   constructor(private _themeService: ThemeService,
               private _meta: Meta) {
     this._meta.updateTag({property: 'og:image', content: 'https://flagcdn.com/gd.svg'});
+    this._meta.addTag({property: 'og:image', content: 'https://flagcdn.com/gd.svg'});
   }
 }

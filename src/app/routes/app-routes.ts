@@ -6,9 +6,6 @@ export const APP_ROUTES: Routes = [
     loadChildren: () => import('../modules/countries/countries.module').then(m => m.CountriesModule)
   },
   {
-
-  },
-  {
     path: '', redirectTo: 'countries', pathMatch: 'full'
   }
 ];
