@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ThemeService } from './shared/services/theme.service';
+import {Component} from '@angular/core';
+import {ThemeService} from './shared/services/theme.service';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
 
   title = 'api-countries';
 
-  constructor( private _themeService: ThemeService ) {
+  constructor(private _themeService: ThemeService,
+              private _meta: Meta) {
+    this._meta.updateTag({property: 'og:image', content: 'https://flagcdn.com/gd.svg'});
   }
 }
